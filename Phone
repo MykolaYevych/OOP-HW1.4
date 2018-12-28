@@ -1,0 +1,49 @@
+package com.gmail.nikolajievich;
+
+public class Phone {
+
+	private String number;
+
+	public Phone(String number) {
+		super();
+		this.number = number;
+	}
+
+	public Phone() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	@Override
+	public String toString() {
+		return "Phone [number=" + number + "]";
+	}
+
+	public void registered(Network network) {
+
+		network.getPhoneNumbers().add(number);
+
+	}
+
+	public void call(Network network, String callerNumber) {
+		for (int i = 0; i < network.getPhoneNumbers().size(); i++) {
+			if (network.getPhoneNumbers().get(i).equals(number)) {
+				System.out.println("phone number calls");
+			}
+			
+			else {
+				System.out.println("phone number is wrong");
+			}
+
+		}
+	}
+
+}
