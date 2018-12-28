@@ -1,0 +1,26 @@
+package com.gmail.nikolajievich;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Network network = new Network();
+
+        Phone phoneOne = new Phone("0671111111");
+        Phone phoneTwo = new Phone("0672222222");
+        Phone phoneThree = new Phone("0673333333");
+        
+        phoneOne.registered(network);
+        phoneTwo.registered(network);
+        phoneThree.registered(network);
+        network.printNumbers();
+
+        phoneOne.call(network, phoneThree.getNumber());
+        phoneTwo.call(network, phoneThree.getNumber());
+        phoneThree.call(network, phoneOne.getNumber());
+
+      
+
+	}
+
+}
