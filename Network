@@ -1,0 +1,49 @@
+package com.gmail.nikolajievich;
+
+import java.util.List;
+
+public class Network {
+
+	private String operatorName;
+	private List<String> phoneNumbers;
+
+	public Network(String operatorName, List<String> phoneNumbers) {
+		super();
+		this.operatorName = operatorName;
+		this.phoneNumbers = phoneNumbers;
+	}
+
+	public Network() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getOperatorName() {
+		return operatorName;
+	}
+
+	public void setOperatorName(String operatorName) {
+		this.operatorName = operatorName;
+	}
+
+	public List<String> getPhoneNumbers() {
+		return phoneNumbers;
+	}
+
+	public void setPhoneNumbers(List<String> phoneNumbers) {
+		this.phoneNumbers = phoneNumbers;
+	}
+
+	@Override
+	public String toString() {
+		return "Network [operatorName=" + operatorName + ", phoneNumbers=" + phoneNumbers + "]";
+	}
+
+	public void printNumbers() {		
+		for (int i = 0; i < phoneNumbers.size(); i++) {
+			System.out.println(phoneNumbers.get(i));
+		}
+
+	}
+
+}
